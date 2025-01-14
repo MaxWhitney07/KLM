@@ -1,2 +1,23 @@
-/* Background color: #1FBA6C  */
-/* Font color: #108A4D */
+body {  
+    background-color: white;  
+    margin: 0;  
+    font-family: Arial, sans-serif;  
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+    height: 100vh;  
+    text-align: center;  
+    border: 10px solid #1FBA6C; /* Add this line for the border */  
+    box-sizing: border-box; /* Ensures padding and border are included in the total width and height */  
+}  
+  
+.intro-box {  
+    padding: 20px;  
+}  
+  
+.intro-box h2 {  
+    font-family: 'Alkalami', serif;  
+    font-size: 64px;  
+    color: #108A4D;  
+    margin: 0;  
+}  
