@@ -1,11 +1,13 @@
 body {  
-    background-color: white;  
+    background-color: #F5FFFA; 
     margin: 0;  
     font-family: Arial, sans-serif;  
     display: flex;  
     justify-content: center;  
     align-items: center;  
-    height: 100vh;  
+    width: 100%;
+	max-width: 960px;
+	margin: 0 auto;
     text-align: center;  
     border: 10px solid #1FBA6C; /* Add this line for the border */  
     box-sizing: border-box; /* Ensures padding and border are included in the total width and height */  
@@ -21,3 +23,54 @@ body {
     color: #108A4D;  
     margin: 0;  
 }  
+	
+nav {
+  width: 100%;
+  margin: 20px 0; 
+  }
+
+
+h1 {
+	color: #00FA9A;
+	font-family: Lucida Handwriting, cursive;
+	letter-spacing: 3px;
+	text-align: center;
+	background-color: MintCream;
+	text-shadow: 5px 5px 10px #FFD700;
+	border-style: groove;
+	border-width: 10px;
+	border-color: #9370DB;
+	}
+	
+	
+/*Nav Bar styling*/
+
+
+
+ ul.nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: MintCream;
+  width: 100%;
+}
+
+li.nav {
+	float: left;
+}
+
+li a {
+  display: block;
+  width: 100%;
+  color: #00FA9A;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 50px;
+  text-shadow: 5px 5px 10px #FFD700;
+}
+
+li a:hover {
+  background-color: #FFD700;
+}
