@@ -1,2 +1,95 @@
-/* Background color: #1FBA6C  */
-/* Font color: #108A4D */
+body {
+	background-color: #F5FFFA;
+	background-image: url("../images/lettuce.jpg");	
+	width: 100%;
+	max-width: 960px;
+	margin: 0 auto;
+	}
+
+
+h1 {
+	color: #00FA9A;
+	font-family: Lucida Handwriting, cursive;
+	letter-spacing: 3px;
+	text-align: center;
+	background-color: MintCream;
+	text-shadow: 5px 5px 10px #FFD700;
+	border-style: groove;
+	border-width: 10px;
+	border-color: #9370DB;
+	}
+
+:root {
+	--nav-icon-width: 50px;
+	--nav-border-width: 8px;
+}
+
+html, body {
+	height: 100%;
+	margin; 0;
+	font-family: sans-serif;
+}
+
+.page-container {
+	height: inherit;
+	display: flex;
+}
+
+.main {
+	height: inherit;
+	padding: 0;
+	padding-left: var(--nav-border-width);
+	overflow-y: auto;
+}
+
+.nav {
+	width: 150px;
+	height: inherit;
+	position: relative;
+	background-color: MintCream;
+	transition: width 0.2s;
+	flex-shrink: 0;
+
+.nav--collapsed {
+	width: var(--nav-icon-width);
+}
+
+.nav--collapsed .nav__label {
+	display: none;
+}
+
+.nav__link {
+	display: flex;
+	align-items: center;
+	color: SpringGreen;
+	text-shadow: 1px 1px 5px #FFD700;
+	text-decoration: none;
+}
+
+.nav__link:hover {
+	background-color: gray;
+}
+
+.nav__icon-container {
+	width: var(--nav-icon-width);
+	height: var(--nav-icon-width);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+}
+
+.nav__border {
+	position: absolute;
+	left: 100%;
+	top: 0;
+	width: var(--nav-border-width);
+	height: inherit;
+	background-color: gray;
+	transition: background-color 0.2s;
+	cursor: ew-resize;
+}
+
+.nav__border:hover {
+	background-color: darkGray;
+}
