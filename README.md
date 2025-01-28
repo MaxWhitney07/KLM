@@ -1,4 +1,4 @@
-Max Whitney: Menu, Stylesheet
+Max Whitney: Menu, Contact, Stylesheet
 
 Levi Hansen: Home, Stylesheet
 
