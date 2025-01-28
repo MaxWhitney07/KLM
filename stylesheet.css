@@ -1,69 +1,42 @@
-body {  
-  background-color: #F5FFFA; 
-  margin: 0;  
-  font-family: Arial, sans-serif;  
-
-  justify-content: center;  
-  width: 100%;
-  margin: 0 auto;
-  text-align: center;  
-  border: 10px solid #1FBA6C; /* Add this line for the border */  
-  box-sizing: border-box; /* Ensures padding and border are included in the total width and height */  
-} 
-
-.intro-box {  
-    padding: 20px;  
-} 
+body {    
+    background-color: white;    
+    margin: 0;    
+    font-family: Arial, sans-serif;     
+    text-align: center;    
+    border: 10px solid #1FBA6C;    
+    box-sizing: border-box;    
+}    
+    
+.intro-box {    
+    padding: 20px;    
+}    
+    
+.intro-box h2 {    
+    font-family: 'Alkalami', serif;    
+    font-size: 64px;    
+    color: #108A4D;    
+    margin: 0;    
+}    
   
-.intro-box h2 {  
-    font-family: 'Alkalami', serif;  
-    font-size: 64px;  
-    color: #108A4D;  
-    margin: 0;  
-} 
-
-h1 {
-	color: #00FA9A;
-	font-family: Lucida Handwriting, cursive;
-	letter-spacing: 3px;
-	text-align: center;
-	background-color: MintCream;
-	text-shadow: 5px 5px 10px #FFD700;
-	border-style: groove;
-	border-width: 10px;
-	border-color: #9370DB;
-	}
-
-footer {
-  float: left;
-}
-	
-/*Nav Bar styling*/
-
- ul.nav {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: MintCream;
-  width: 100%;
-}
-
-li.nav {
-	float: left;
-}
-
-li a {
-  display: block;
-  width: 100%;
-  color: #00FA9A;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 50px;
-  text-shadow: 5px 5px 10px #FFD700;
-}
-
-li a:hover {
-  background-color: #FFD700;
-}
+.menu-item {    
+    max-width: 300px;    
+    margin: 20px auto; /* Centers the menu items */  
+    text-align: center;    
+}    
+    
+.dish-image {    
+    width: 100%;    
+    height: auto;    
+    border-radius: 10px;    
+}    
+    
+.description {    
+    font-size: 16px;    
+    color: #555;    
+}    
+    
+.price {    
+    font-size: 18px;    
+    font-weight: bold;    
+    color: #108A4D;    
+}  
