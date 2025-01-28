@@ -1,71 +1,144 @@
-<!DOCTYPE html>    
-<html lang="en">    
-<head>    
-    <meta charset="UTF-8">    
-    <link rel="stylesheet" href="stylesheet.css">    
-    <link href="https://fonts.googleapis.com/css2?family=Alkalami&display=swap" rel="stylesheet">    
-    <title>Ingram - Menu</title>    
-</head>    
-<body>    
-    <div class="intro-box">    
-        <h2>Menu</h2>    
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <link rel="stylesheet" href="stylesheet.css">  
+    <link href="https://fonts.googleapis.com/css2?family=Alkalami&display=swap" rel="stylesheet">  
+    <title>Ingram - Menu</title>
+    <style>  
+        /* Internal CSS for page-specific styles */  
+  
+        .menu-container {  
+            display: flex;  
+            flex-wrap: wrap;  
+            justify-content: center;  
+            padding: 20px;  
+        }  
+  
+        .menu-item {  
+            flex: 1 1 300px;  
+            max-width: 300px;  
+            margin: 10px;  
+            text-align: center;  
+        }  
+  
+        .dish-image {  
+            width: 100%;  
+            height: 200px;  
+            object-fit: cover;  
+            border-radius: 10px;  
+        }  
+  
+        .description-container {  
+            max-height: 0; /* Start with no height */  
+            overflow: hidden; /* Hide content that overflows the set height */  
+            transition: max-height 0.5s ease-out; /* Smooth transition effect */  
+        }  
+  
+        .description-container.open {  
+            max-height: 200px; /* Adjust to the expected maximum height of your content */  
+        }  
+  
+        .toggle-button {  
+            background: none;  
+            border: none;  
+            cursor: pointer;  
+            font-size: 12px;  
+            vertical-align: middle;  
+            margin-left: 5px;  
+        }  
+  
+        .description {  
+            font-size: 16px;  
+            color: #555;  
+        }  
+  
+        @media (max-width: 768px) {  
+            .menu-item {  
+                flex: 1 1 100%;  
+            }  
+        }  
+    </style>  
+</head>  
+<body>  
+    <div class="intro-box">  
+        <h2>Menu</h2>  
     </div>  
   
-    <!-- Vegan Dish 1 -->  
-    <div class="menu-item">  
-        <img src="avocadotoast.jpg" alt="Avocado Toast" class="dish-image">  
-        <h3>Avocado Toast</h3>  
-        <p class="description">Crispy bread topped with smashed avocado, tomatoes, a sprinkle of sesame seeds, and a blend of our seasonings.</p>  
+    <div class="menu-container">  
+        <!-- Vegan Dish 1 -->  
+        <div class="menu-item">  
+            <h3>Avocado Toast <button class="toggle-button">▼</button></h3>  
+            <img src="avocadotoast.jpg" alt="Avocado Toast" class="dish-image">  
+            <div class="description-container">  
+                <p class="description">Crispy bread topped with smashed avocado, tomatoes, a sprinkle of sesame seeds, and a blend of our seasonings.</p>  
+            </div>  
+        </div>  
+  
+        <!-- Vegan Dish 2 -->  
+        <div class="menu-item">  
+            <h3>Vegan Pasta Primavera <button class="toggle-button">▼</button></h3>  
+            <img src="pastaprimavera.jpg" alt="Vegan Pasta" class="dish-image">  
+            <div class="description-container">  
+                <p class="description">Whole-grain pasta tossed with seasonal veggies and a light garlic sauce.</p>  
+            </div>  
+        </div>  
+  
+        <!-- Vegan Dish 3 -->  
+        <div class="menu-item">  
+            <h3>Chickpea Salad <button class="toggle-button">▼</button></h3>  
+            <img src="chickpeasalad.jpg" alt="Chickpea Salad" class="dish-image">  
+            <div class="description-container">  
+                <p class="description">Fresh greens, chickpeas, cucumber, and a lemon-tahini dressing.</p>  
+            </div>  
+        </div>  
+  
+        <!-- Vegan Dish 4 -->  
+        <div class="menu-item">  
+            <h3>Vegan Sushi Rolls <button class="toggle-button">▼</button></h3>  
+            <img src="vegansushi.jpg" alt="Vegan Sushi" class="dish-image">  
+            <div class="description-container">  
+                <p class="description">Filled with avocado, cucumber, and carrots.</p>  
+            </div>  
+        </div>  
+  
+        <!-- Vegan Dish 5 -->  
+        <div class="menu-item">  
+            <h3>Quinoa & Black Bean Bowl <button class="toggle-button">▼</button></h3>  
+            <img src="quinoaandblackbeanbowl.jpg" alt="Quinoa Bowl" class="dish-image">  
+            <div class="description-container">  
+                <p class="description">With roasted veggies and a lime-cilantro dressing.</p>  
+            </div>  
+        </div>  
+  
+        <!-- Vegan Dish 6 -->  
+        <div class="menu-item">  
+            <h3>Mushroom Tacos <button class="toggle-button">▼</button></h3>  
+            <img src="mushroomtacos.jpg" alt="Mushroom Tacos" class="dish-image">  
+            <div class="description-container">  
+                <p class="description">Topped with fresh salsa and avocado.</p>  
+            </div>  
+        </div>  
+  
+        <!-- Vegan Dish 7 -->  
+        <div class="menu-item">  
+            <h3>Vegan Curry <button class="toggle-button">▼</button></h3>  
+            <img src="vegancurry.jpg" alt="Vegan Curry" class="dish-image">  
+            <div class="description-container">  
+                <p class="description">With chickpeas, spinach, and coconut milk.</p>  
+            </div>  
+        </div>  
+  
+        <!-- Vegan Dish 8 -->  
+        <div class="menu-item">  
+            <h3>Sweet Potato & Kale Bowl <button class="toggle-button">▼</button></h3>  
+            <img src="sweetpotatoandkalebowl.jpg" alt="Sweet Potato Bowl" class="dish-image">  
+            <div class="description-container">  
+                <p class="description">Drizzled with a maple-tahini glaze.</p>  
+            </div>  
+        </div>  
     </div>  
   
-    <!-- Vegan Dish 2 -->  
-    <div class="menu-item">  
-        <img src="pastaprimavera.jpg" alt="Vegan Pasta" class="dish-image">  
-        <h3>Vegan Pasta Primavera</h3>  
-        <p class="description">Whole-grain pasta tossed with seasonal veggies and a light garlic sauce.</p>  
-    </div>  
-  
-    <!-- Vegan Dish 3 -->  
-    <div class="menu-item">  
-        <img src="chickpeasalad.jpg" alt="Chickpea Salad" class="dish-image">  
-        <h3>Chickpea Salad</h3>  
-        <p class="description">Fresh greens, chickpeas, cucumber, and a lemon-tahini dressing.</p>  
-    </div>  
-  
-    <!-- Vegan Dish 4 -->  
-    <div class="menu-item">  
-        <img src="vegansushi.jpg" alt="Vegan Sushi" class="dish-image">  
-        <h3>Vegan Sushi Rolls</h3>  
-        <p class="description">Filled with avocado, cucumber, and carrots.</p>  
-    </div>  
-  
-    <!-- Vegan Dish 5 -->  
-    <div class="menu-item">  
-        <img src="quinoaadnblackbeanbowl.jpg" alt="Quinoa Bowl" class="dish-image">  
-        <h3>Quinoa & Black Bean Bowl</h3>  
-        <p class="description">With roasted veggies and a lime-cilantro dressing.</p>  
-    </div>  
-  
-    <!-- Vegan Dish 6 -->  
-    <div class="menu-item">  
-        <img src="mushroomtacos.jpg" alt="Mushroom Tacos" class="dish-image">  
-        <h3>Mushroom Tacos</h3>  
-        <p class="description">Topped with fresh salsa and avocado.</p>  
-    </div>  
-  
-    <!-- Vegan Dish 7 -->  
-    <div class="menu-item">  
-        <img src="vegancurry.jpg" alt="Vegan Curry" class="dish-image">  
-        <h3>Vegan Curry</h3>  
-        <p class="description">With chickpeas, spinach, and coconut milk.</p>  
-    </div>  
-  
-    <!-- Vegan Dish 8 -->  
-    <div class="menu-item">  
-        <img src="sweetpotatoandkalebowl.jpg" alt="Sweet Potato Bowl" class="dish-image">  
-        <h3>Sweet Potato & Kale Bowl</h3>  
-        <p class="description">Drizzled with a maple-tahini glaze.</p>  
-    </div>  
-  
-</body>    
+    <script src="script.js"></script>  
+</body>  
 </html>  
