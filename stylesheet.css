@@ -81,7 +81,8 @@ body {
 
 
 h1 {
-	margin-left: 50px;
+	margin-left: 30%;
+	position: fixed;
 	color: #00FA9A;
 	font-family: Lucida Handwriting, cursive;
 	letter-spacing: 3px;
