@@ -1,1 +1,100 @@
-<!--placeholder-->
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <link rel="stylesheet" href="stylesheet.css"> <!-- Link to the universal stylesheet -->  
+    <link href="https://fonts.googleapis.com/css2?family=Alkalami&display=swap" rel="stylesheet">  
+    <title>Ingram - Contact Us</title>  
+    <style>  
+        /* Internal CSS for Contact Us page */  
+  
+        /* Style links to match the 'Contact Us' heading color */  
+        a {  
+            color: #108A4D; /* Same color as 'Contact Us' heading */  
+            text-decoration: none;  
+        }  
+        a:hover {  
+            color: #1FBA6C; /* Slightly different color on hover */  
+        }  
+  
+        /* Style for contact-item headings */  
+        .contact-item h3 {  
+            color: black; /* Black color for the headings */  
+            font-family: 'Alkalami', serif; /* Same font as 'Contact Us' */  
+            font-size: 32px;  
+            margin: 20px 0 10px 0;  
+        }  
+  
+        /* Social media flexbox layout */  
+        .social-media {  
+            display: flex;  
+            justify-content: center; /* Center the icons */  
+            align-items: center;  
+            gap: 10px; /* Use gap for more precise control over space between items */  
+            margin: 20px 0;  
+        }  
+  
+        .social-logo {  
+            width: 60px; /* Increase size for prominence */  
+            height: auto;  
+        }  
+  
+        .contact-detail p {  
+            margin: 5px 0;  
+            color: #333;  
+            font-size: 18px;  
+        }  
+    </style>  
+</head>  
+<body>  
+    <div class="outer-container">  
+        <div class="intro-box">  
+            <h2>Contact Us</h2>  
+        </div>  
+  
+        <div class="contact-container">  
+            <!-- Social Media Section -->  
+            <div class="contact-item">  
+                <h3>Social Media</h3>  
+                <div class="contact-detail social-media">  
+                    <div class="social-item">  
+                        <a href="https://facebook.com/yourpage" target="_blank">  
+                            <img src="facebook-logo.png" alt="Facebook Logo" class="social-logo">  
+                        </a>  
+                    </div>  
+                    <div class="social-item">  
+                        <a href="https://twitter.com/yourprofile" target="_blank">  
+                            <img src="twitter-logo.jpg" alt="Twitter Logo" class="social-logo">  
+                        </a>  
+                    </div>  
+                    <div class="social-item">  
+                        <a href="https://instagram.com/yourhandle" target="_blank">  
+                            <img src="instagram-logo.webp" alt="Instagram Logo" class="social-logo">  
+                        </a>  
+                    </div>  
+                </div>  
+            </div>  
+  
+            <!-- Email Section -->  
+            <div class="contact-item">  
+                <h3>Email</h3>  
+                <div class="contact-detail">  
+                    <p>Get in touch via email:</p>  
+                    <p>General inquiries: <a href="mailto:info@yourdomain.com">info@yourdomain.com</a></p>  
+                    <p>Support: <a href="mailto:support@yourdomain.com">support@yourdomain.com</a></p>  
+                </div>  
+            </div>  
+  
+            <!-- Phone Section -->  
+            <div class="contact-item">  
+                <h3>Phone Numberss</h3>  
+                <div class="contact-detail">  
+                    <p>Call us at:</p>  
+                    <p>Main Line: (123) 456-7890</p>  
+                    <p>Customer Support: (098) 765-4321</p>  
+                </div>  
+            </div>  
+        </div>  
+    </div>  
+</body>  
+</html>  
