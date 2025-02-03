@@ -211,7 +211,7 @@
   <script>
     // Navigation
     {
-      console.log("Press 'ENTER' to see the secret menu");
+
       const collapsedClass = "nav--collapsed";
       const lsKey = "navCollapsed";
       const nav = document.querySelector(".nav");
@@ -226,6 +226,8 @@
     }
 
     // Secret Menu
+    console.log("Press 'ENTER' to see the secret menu");
+    
     document.querySelectorAll('.toggle-button').forEach(button => {  
     button.addEventListener('click', () => {  
         const menuItem = button.parentElement.parentElement;  
