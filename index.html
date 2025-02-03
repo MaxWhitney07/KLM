@@ -1,37 +1,70 @@
 <!DOCTYPE html>
-<html>
-	<head>
+<html lang="en">
 
-		<title>Garden of Vegan</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Collapsible Sidebar</title>
+  <link rel="stylesheet" href="../css/veganhomepage_css.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
 
-		<link rel="stylesheet" href="../css/veganhp.css">
+<body>
+  <div class="page-container">
+    <nav class="nav">
+      <div class="nav__border"></div>
+      <a href="#" class="nav__link">
+        <div class="nav__icon-container">
+          <i class="material-icons">menu</i>
+        </div>
+        <span class="nav__label">Navigation</span>
+      </a>
+      <a href="veganhomepage.html" class="nav__link">
+        <div class="nav__icon-container">
+          <i class="material-icons">home</i>
+        </div>
+        <span class="nav__label">Home</span>
+      </a>
+      <a href="menu.html" class="nav__link">
+        <div class="nav__icon-container">
+          <i class="material-icons">spa</i>
+        </div>
+        <span class="nav__label">Menu</span>
+      </a>
+      <a href="about.html" class="nav__link">
+        <div class="nav__icon-container">
+          <i class="material-icons">info</i>
+        </div>
+        <span class="nav__label">About</span>
+      </a>
+      <a href="contact.html" class="nav__link">
+        <div class="nav__icon-container">
+          <i class="material-icons">phone</i>
+        </div>
+        <span class="nav__label">Contact Us</span>
+      </a>
+    </nav>
 
+    <h1>The Garden of Ingram's Anonymous</h1>
+    <main class="main">
+    </main>
+  </div>
+  <script>
+    // Navigation
+    {
+      const collapsedClass = "nav--collapsed";
+      const lsKey = "navCollapsed";
+      const nav = document.querySelector(".nav");
+      const navBorder = nav.querySelector(".nav__border");
+      if (localStorage.getItem(lsKey) === "true") {
+        nav.classList.add(collapsedClass);
+      }
+      navBorder.addEventListener("click", () => {
+        nav.classList.toggle(collapsedClass);
+        localStorage.setItem(lsKey, nav.classList.contains(collapsedClass));
+      });
+    }
+  </script>
+</body>
 
-		<style>
-
-		</style>
-
-	</head>
-	
-	
-	<body>
-	
-		<h1>The Garden of Ingram's Anonymous</h1>
-		
-	<nav>
-		<ul>
-			<li><a class="active" href="../pages/veganhp.html">Home</a></li>
-			<li><a href="#menu">Menu</a></li>
-			<li><a href="#info">Info</a></li>
-		</ul>
-	<nav>
-		
-	</body>
-	
-<html>
-
-
-<!-- Menu ideas: menu button leads to QR code, QR code takes you to another website that requires ou to go through like 11 captchas. The end of those redirects you to another page that requires you to fill out a form that includes your 
-email, name, number, ID verification, address, etc. Basically everything. After filling out the form it sends you an email confirmation and gives you a new link. That link guides you to the carnivore website and makes you look at all
-of the menu items and stuff before making you use inspect element to find a hidden comment that includes another link. pasting that link into a browser will take you to a sketcy looking website with a download button. Once you download
-the file its just an image of Tyler Sharpe. You have to rip the metadata of the file to get the real link to the menu , at wich you can finally see the vegan menu.
+</html>
