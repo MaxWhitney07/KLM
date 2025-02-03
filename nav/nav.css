@@ -9,7 +9,7 @@ body {
   height: 100%;
   margin: 0px;
   font-family: sans-serif;
-  background-image: url("../images/lettuce.jpg");	
+  background-image: url("/img/lettuce.jpg");	
 }
 
 .page-container {
