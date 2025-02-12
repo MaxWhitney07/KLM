@@ -4,9 +4,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Collapsible Sidebar</title>
-  <link rel="stylesheet" href="stylesheet.css">
+  <title>Menu</title>
+  <link rel="stylesheet" href="../css/stylesheet.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+
+  <style>  
+    /* Internal CSS for page-specific styles */  
+
+    .menu-container {  
+        display: flex;  
+        flex-wrap: wrap;  
+        justify-content: center;  
+        padding: 20px;  
+    }  
+
+    .menu-item {  
+        flex: 1 1 300px;  
+        max-width: 300px;  
+        margin: 10px;  
+        text-align: center;  
+    }  
+
+    .dish-image {  
+        width: 100%;  
+        height: 200px;  
+        object-fit: cover;  
+        border-radius: 10px;  
+    }  
+
+    .description-container {  
+        max-height: 0; /* Start with no height */  
+        overflow: hidden; /* Hide content that overflows the set height */  
+        transition: max-height 0.5s ease-out; /* Smooth transition effect */  
+    }  
+
+    .description-container.open {  
+        max-height: 200px; /* Adjust to the expected maximum height of content */  
+    }  
+
+    .toggle-button {  
+        background: none;  
+        border: none;  
+        cursor: pointer;  
+        font-size: 12px;  
+        vertical-align: middle;  
+        margin-left: 5px;  
+    }  
+
+    .description {  
+        font-size: 16px;  
+        color: #555;  
+    }  
+
+    @media (max-width: 768px) {  
+        .menu-item {  
+            flex: 1 1 100%;  
+        }  
+    }  
+</style>  
 </head>
 
 <body>
@@ -44,169 +100,171 @@
         <span class="nav__label">Contact Us</span>
       </a>
     </nav>
-  </div>
-
-    <div id = "sect1" style = "display: block;">
-        <div class="intro-box">  
-            <h2>Menu</h2>  
-        </div>  
-    
-        <div class="menu-container">  
-            <!-- Vegan Dish 1 -->  
-            <div class="menu-item">  
-                <h3>Avocado Toast <button class="toggle-button">▼</button></h3>  
-                <img src="img/avocadotoast.jpg" alt="Avocado Toast" class="dish-image">  
-                <div class="description-container">  
-                    <p class="description">Crispy bread topped with smashed avocado, tomatoes, a sprinkle of sesame seeds, and a blend of our seasonings.</p>  
-                </div>  
+    <main class="main">
+        <div id = "sect1" style = "display: block;">
+            <div class="intro-box">  
+                <h2>Menu</h2>  
             </div>  
-    
-            <!-- Vegan Dish 2 -->  
-            <div class="menu-item">  
-                <h3>Vegan Pasta Primavera <button class="toggle-button">▼</button></h3>  
-                <img src="img/pastaprimavera.jpg" alt="Vegan Pasta" class="dish-image">  
-                <div class="description-container">  
-                    <p class="description">Whole-grain pasta tossed with seasonal veggies and a light garlic sauce.</p>  
+        
+            <div class="menu-container">  
+                <!-- Vegan Dish 1 -->  
+                <div class="menu-item">  
+                    <h3>Avocado Toast <button class="toggle-button">▼</button></h3>  
+                    <img src="img/avocadotoast.jpg" alt="Avocado Toast" class="dish-image">  
+                    <div class="description-container">  
+                        <p class="description">Crispy bread topped with smashed avocado, tomatoes, a sprinkle of sesame seeds, and a blend of our seasonings.</p>  
+                    </div>  
                 </div>  
-            </div>  
-    
-            <!-- Vegan Dish 3 -->  
-            <div class="menu-item">  
-                <h3>Chickpea Salad <button class="toggle-button">▼</button></h3>  
-                <img src="img/chickpeasalad.jpg" alt="Chickpea Salad" class="dish-image">  
-                <div class="description-container">  
-                    <p class="description">Fresh greens, chickpeas, cucumber, and a lemon-tahini dressing.</p>  
+        
+                <!-- Vegan Dish 2 -->  
+                <div class="menu-item">  
+                    <h3>Vegan Pasta Primavera <button class="toggle-button">▼</button></h3>  
+                    <img src="img/pastaprimavera.jpg" alt="Vegan Pasta" class="dish-image">  
+                    <div class="description-container">  
+                        <p class="description">Whole-grain pasta tossed with seasonal veggies and a light garlic sauce.</p>  
+                    </div>  
                 </div>  
-            </div>  
-    
-            <!-- Vegan Dish 4 -->  
-            <div class="menu-item">  
-                <h3>Vegan Sushi Rolls <button class="toggle-button">▼</button></h3>  
-                <img src="img/vegansushi.jpg" alt="Vegan Sushi" class="dish-image">  
-                <div class="description-container">  
-                    <p class="description">Filled with avocado, cucumber, and carrots.</p>  
+        
+                <!-- Vegan Dish 3 -->  
+                <div class="menu-item">  
+                    <h3>Chickpea Salad <button class="toggle-button">▼</button></h3>  
+                    <img src="img/chickpeasalad.jpg" alt="Chickpea Salad" class="dish-image">  
+                    <div class="description-container">  
+                        <p class="description">Fresh greens, chickpeas, cucumber, and a lemon-tahini dressing.</p>  
+                    </div>  
                 </div>  
-            </div>  
-    
-            <!-- Vegan Dish 5 -->  
-            <div class="menu-item">  
-                <h3>Quinoa & Black Bean Bowl <button class="toggle-button">▼</button></h3>  
-                <img src="img/quinoaandblackbeanbowl.jpg" alt="Quinoa Bowl" class="dish-image">  
-                <div class="description-container">  
-                    <p class="description">With roasted veggies and a lime-cilantro dressing.</p>  
+        
+                <!-- Vegan Dish 4 -->  
+                <div class="menu-item">  
+                    <h3>Vegan Sushi Rolls <button class="toggle-button">▼</button></h3>  
+                    <img src="img/vegansushi.jpg" alt="Vegan Sushi" class="dish-image">  
+                    <div class="description-container">  
+                        <p class="description">Filled with avocado, cucumber, and carrots.</p>  
+                    </div>  
                 </div>  
-            </div>  
-    
-            <!-- Vegan Dish 6 -->  
-            <div class="menu-item">  
-                <h3>Mushroom Tacos <button class="toggle-button">▼</button></h3>  
-                <img src="img/mushroomtacos.jpg" alt="Mushroom Tacos" class="dish-image">  
-                <div class="description-container">  
-                    <p class="description">Topped with fresh salsa and avocado.</p>  
+        
+                <!-- Vegan Dish 5 -->  
+                <div class="menu-item">  
+                    <h3>Quinoa & Black Bean Bowl <button class="toggle-button">▼</button></h3>  
+                    <img src="img/quinoaandblackbeanbowl.jpg" alt="Quinoa Bowl" class="dish-image">  
+                    <div class="description-container">  
+                        <p class="description">With roasted veggies and a lime-cilantro dressing.</p>  
+                    </div>  
                 </div>  
-            </div>  
-    
-            <!-- Vegan Dish 7 -->  
-            <div class="menu-item">  
-                <h3>Vegan Curry <button class="toggle-button">▼</button></h3>  
-                <img src="img/vegancurry.jpg" alt="Vegan Curry" class="dish-image">  
-                <div class="description-container">  
-                    <p class="description">With chickpeas, spinach, and coconut milk.</p>  
+        
+                <!-- Vegan Dish 6 -->  
+                <div class="menu-item">  
+                    <h3>Mushroom Tacos <button class="toggle-button">▼</button></h3>  
+                    <img src="img/mushroomtacos.jpg" alt="Mushroom Tacos" class="dish-image">  
+                    <div class="description-container">  
+                        <p class="description">Topped with fresh salsa and avocado.</p>  
+                    </div>  
                 </div>  
-            </div>  
-    
-            <!-- Vegan Dish 8 -->  
-            <div class="menu-item">  
-                <h3>Sweet Potato & Kale Bowl <button class="toggle-button">▼</button></h3>  
-                <img src="img/sweetpotatoandkalebowl.jpg" alt="Sweet Potato Bowl" class="dish-image">  
-                <div class="description-container">  
-                    <p class="description">Drizzled with a maple-tahini glaze.</p>  
+        
+                <!-- Vegan Dish 7 -->  
+                <div class="menu-item">  
+                    <h3>Vegan Curry <button class="toggle-button">▼</button></h3>  
+                    <img src="img/vegancurry.jpg" alt="Vegan Curry" class="dish-image">  
+                    <div class="description-container">  
+                        <p class="description">With chickpeas, spinach, and coconut milk.</p>  
+                    </div>  
                 </div>  
-            </div>  
-        </div>  
-    </div>
-  
-<!--SECRET MENU-->
-
-    <div id = "sect2" style = "display: none;">
-        <div class="intro-box">  
-            <h2>Secret Menu</h2>  
-        </div>  
-    
-        <div class="menu-container">  
-            <!-- Dish 1 -->  
-            <div class="menu-item">  
-                <h3>Meatloaf <button class="toggle-button">▼</button></h3>  
-                <img src="img/meatloaf.jpg" alt="Meatloaf" class="dish-image">  
-                <div class="description-container">  
-                    <p class="description">its dead something</p>  
-                </div>  
-            </div>  
-    
-            <!-- Dish 2 -->  
-            <div class="menu-item">  
-                <h3>Chicken Pasta <button class="toggle-button">▼</button></h3>  
-                <img src="img/chickenpasta.jpg" alt="Chicken Pasta" class="dish-image">  
-                <div class="description-container">  
-                    <p class="description">Whole-grain pasta tossed with seasoned Chicken and a light garlic sauce.</p>  
-                </div>  
-            </div>  
-    
-            <!-- Dish 3 -->  
-            <div class="menu-item">  
-                <h3>Ribeye <button class="toggle-button">▼</button></h3>  
-                <img src="img/ribeye.jpg" alt="Ribeye" class="dish-image">  
-                <div class="description-container">  
-                    <p class="description">Lemon Pepper Ribeye made with all natural sauces.</p>  
-                </div>  
-            </div>  
-    
-            <!-- Dish 4 -->  
-            <div class="menu-item">  
-                <h3>Sushi Rolls <button class="toggle-button">▼</button></h3>  
-                <img src="img/sushi.jpg" alt="Sushi" class="dish-image">  
-                <div class="description-container">  
-                    <p class="description">Filled with salmon, cream cheese, and topped with salmon and chives.</p>  
-                </div>  
-            </div>  
-    
-            <!-- Dish 5 -->  
-            <div class="menu-item">  
-                <h3>Lamb Gyros <button class="toggle-button">▼</button></h3>  
-                <img src="img/gyros.jpg" alt="Lamb Gyros" class="dish-image">  
-                <div class="description-container">  
-                    <p class="description">With roasted veggies and a lime-cilantro dressing.</p>  
-                </div>  
-            </div>  
-    
-            <!-- Dish 6 -->  
-            <div class="menu-item">  
-                <h3>Steak Tacos <button class="toggle-button">▼</button></h3>  
-                <img src="img/steaktacos.jpg" alt="Steak Tacos" class="dish-image">  
-                <div class="description-container">  
-                    <p class="description">Topped with fresh salsa and avocado.</p>  
-                </div>  
-            </div>  
-    
-            <!-- Dish 7 -->  
-            <div class="menu-item">  
-                <h3>Chicken Curry <button class="toggle-button">▼</button></h3>  
-                <img src="img/chickencurry.jpg" alt="Chicken Curry" class="dish-image">  
-                <div class="description-container">  
-                    <p class="description">With jalepeneo, spinach, and chicken.</p>  
-                </div>  
-            </div>  
-    
-            <!-- Dish 8 -->  
-            <div class="menu-item">  
-                <h3>Pepperoni Pizza <button class="toggle-button">▼</button></h3>  
-                <img src="img/pizza.jpg" alt="Pepperoni Pizza" class="dish-image">  
-                <div class="description-container">  
-                    <p class="description">Gooey Cheese with juicey Pepperonis.</p>  
+        
+                <!-- Vegan Dish 8 -->  
+                <div class="menu-item">  
+                    <h3>Sweet Potato & Kale Bowl <button class="toggle-button">▼</button></h3>  
+                    <img src="img/sweetpotatoandkalebowl.jpg" alt="Sweet Potato Bowl" class="dish-image">  
+                    <div class="description-container">  
+                        <p class="description">Drizzled with a maple-tahini glaze.</p>  
+                    </div>  
                 </div>  
             </div>  
         </div>
-    </div>
+      
+    <!--SECRET MENU-->
+    
+        <div id = "sect2" style = "display: none;">
+            <div class="intro-box">  
+                <h2>Secret Menu</h2>  
+            </div>  
+        
+            <div class="menu-container">  
+                <!-- Dish 1 -->  
+                <div class="menu-item">  
+                    <h3>Meatloaf <button class="toggle-button">▼</button></h3>  
+                    <img src="img/meatloaf.jpg" alt="Meatloaf" class="dish-image">  
+                    <div class="description-container">  
+                        <p class="description">its dead something</p>  
+                    </div>  
+                </div>  
+        
+                <!-- Dish 2 -->  
+                <div class="menu-item">  
+                    <h3>Chicken Pasta <button class="toggle-button">▼</button></h3>  
+                    <img src="img/chickenpasta.jpg" alt="Chicken Pasta" class="dish-image">  
+                    <div class="description-container">  
+                        <p class="description">Whole-grain pasta tossed with seasoned Chicken and a light garlic sauce.</p>  
+                    </div>  
+                </div>  
+        
+                <!-- Dish 3 -->  
+                <div class="menu-item">  
+                    <h3>Ribeye <button class="toggle-button">▼</button></h3>  
+                    <img src="img/ribeye.jpg" alt="Ribeye" class="dish-image">  
+                    <div class="description-container">  
+                        <p class="description">Lemon Pepper Ribeye made with all natural sauces.</p>  
+                    </div>  
+                </div>  
+        
+                <!-- Dish 4 -->  
+                <div class="menu-item">  
+                    <h3>Sushi Rolls <button class="toggle-button">▼</button></h3>  
+                    <img src="img/sushi.jpg" alt="Sushi" class="dish-image">  
+                    <div class="description-container">  
+                        <p class="description">Filled with salmon, cream cheese, and topped with salmon and chives.</p>  
+                    </div>  
+                </div>  
+        
+                <!-- Dish 5 -->  
+                <div class="menu-item">  
+                    <h3>Lamb Gyros <button class="toggle-button">▼</button></h3>  
+                    <img src="img/gyros.jpg" alt="Lamb Gyros" class="dish-image">  
+                    <div class="description-container">  
+                        <p class="description">With roasted veggies and a lime-cilantro dressing.</p>  
+                    </div>  
+                </div>  
+        
+                <!-- Dish 6 -->  
+                <div class="menu-item">  
+                    <h3>Steak Tacos <button class="toggle-button">▼</button></h3>  
+                    <img src="img/steaktacos.jpg" alt="Steak Tacos" class="dish-image">  
+                    <div class="description-container">  
+                        <p class="description">Topped with fresh salsa and avocado.</p>  
+                    </div>  
+                </div>  
+        
+                <!-- Dish 7 -->  
+                <div class="menu-item">  
+                    <h3>Chicken Curry <button class="toggle-button">▼</button></h3>  
+                    <img src="img/chickencurry.jpg" alt="Chicken Curry" class="dish-image">  
+                    <div class="description-container">  
+                        <p class="description">With jalepeneo, spinach, and chicken.</p>  
+                    </div>  
+                </div>  
+        
+                <!-- Dish 8 -->  
+                <div class="menu-item">  
+                    <h3>Pepperoni Pizza <button class="toggle-button">▼</button></h3>  
+                    <img src="img/pizza.jpg" alt="Pepperoni Pizza" class="dish-image">  
+                    <div class="description-container">  
+                        <p class="description">Gooey Cheese with juicey Pepperonis.</p>  
+                    </div>  
+                </div>  
+            </div>
+        </div>
+        
+    </main>
+</div>
   
   <script>
     // Navigation
@@ -224,23 +282,9 @@
         localStorage.setItem(lsKey, nav.classList.contains(collapsedClass));
       });
     }
-
-    // Secret Menu
-    console.log("Press 'ENTER' to see the secret menu");
-    
-    document.querySelectorAll('.toggle-button').forEach(button => {  
-    button.addEventListener('click', () => {  
-        const menuItem = button.parentElement.parentElement;  
-        const descriptionContainer = menuItem.querySelector('.description-container');  
-          
-        // Toggle the 'open' class  
-        descriptionContainer.classList.toggle('open');  
-          
-        // Change button text accordingly  
-        const isVisible = descriptionContainer.classList.contains('open');  
-        button.textContent = isVisible ? '▲' : '▼';  
-    });  
-}); 
   </script>
+  
+  <script src="../javascript/script.js"></script>
+  
 </body>
 
