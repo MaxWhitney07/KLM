@@ -80,6 +80,8 @@ body {
 }
 
 
+
+
 h1 {
 	margin-left: 30%;
 	position: fixed;
@@ -96,6 +98,41 @@ h1 {
 	padding: 15px;
 	height: 55px;
 	}
+	
+h2 { 
+	margin-left: 30%;
+	position: absolute:
+	/*below position and margin is purely styling for the nav, not needed for it to function at all*/
+	color: #108a4d;
+	font-family: Lucida Handwriting, cursive;
+	letter-spacing: 3px;
+	text-align: center;
+	background-color: MintCream;
+	text-shadow: 5px 5px 10px #9370DB;
+	border-style: groove;
+	border-width: 10px;
+	border-color: #9370DB;
+	padding: 15px;
+	height: 70px;
+}
+
+h3, p {
+	position: absolute:
+	/*below position and margin is purely styling for the nav, not needed for it to function at all*/
+	color: #108a4d;
+	font-family: Lucida Handwriting, cursive;
+	letter-spacing: 3px;
+	text-align: center;
+	background-color: MintCream;
+	text-shadow: 5px 5px 10px #9370DB;
+	border-style: groove;
+	border-width: 10px;
+	border-color: #9370DB;
+	padding: 15px;
+	height: auto;
+}
+
+
 
 
 body {    
