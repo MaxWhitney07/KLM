@@ -28,7 +28,7 @@ body {
   height: inherit;
   position: relative;
   background-color: MintCream; /*Bg color for nav bar*/
-  transition: width 0.2s;
+  transition: width 0.5s;
   flex-shrink: 0;
 }
 
@@ -43,7 +43,7 @@ body {
 .nav__link {
   display: flex;
   align-items: center;
-  color: #00FA9A; /*nav bar icons and names colors*/
+  color: #00FA9A; /*nav bar icon and name color*/
   text-decoration: none;
 }
 
@@ -84,24 +84,60 @@ h1 {
 	margin-left: 30%;
 	position: fixed;
 	/*below position and margin is purely styling for the nav, not needed for it to function at all*/
-	color: #00FA9A;
+	color: #108a4d;
 	font-family: Lucida Handwriting, cursive;
 	letter-spacing: 3px;
 	text-align: center;
 	background-color: MintCream;
-	text-shadow: 5px 5px 10px #FFD700;
+	text-shadow: 5px 5px 10px #9370DB;
 	border-style: groove;
 	border-width: 10px;
 	border-color: #9370DB;
-	padding: 20px;
-	height: 80px;
+	padding: 15px;
+	height: 55px;
 	}
-	
-	
-nav {
-	color: #00FA9A;
-	font-family: Lucida Handwriting, cursive;
-	text-align: center;
-	background-color: MintCream;
-	text-shadow: 5px 5px 10px #FFD700;
-}
+
+
+body {    
+    background-color: white;    
+    margin: 0;    
+    font-family: Arial, sans-serif;     
+    text-align: center;    
+      
+    box-sizing: border-box;    
+}    
+    
+.intro-box {    
+    padding: 20px;    
+}    
+    
+.intro-box h2 {    
+    font-family: 'Alkalami', serif;    
+    font-size: 64px;    
+    color: #108A4D;    
+    margin: 0;    
+}    
+  
+.menu-item {    
+    max-width: auto;    
+    margin: 20px auto; /* Centers the menu items */  
+    text-align: center;    
+}    
+    
+.dish-image {    
+    width: 100%;    
+    height: auto;    
+    border-radius: 10px;    
+}    
+    
+.description {    
+    font-size: 16px;    
+    color: #555;    
+}    
+    
+.price {    
+    font-size: 18px;    
+    font-weight: bold;    
+    color: #108A4D;    
+}  
+
