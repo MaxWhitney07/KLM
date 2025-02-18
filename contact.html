@@ -1,52 +1,131 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Collapsible Sidebar</title>
-  <link rel="stylesheet" href="stylesheet.css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-</head>
-
-<body>
-  <div class="page-container">
-    <nav class="nav">
-      <div class="nav__border"></div>
-      <a href="#" class="nav__link">
-        <div class="nav__icon-container">
-          <i class="material-icons">menu</i>
-        </div>
-        <span class="nav__label">Navigation</span>
-      </a>
-      <a href="veganhomepage.html" class="nav__link">
-        <div class="nav__icon-container">
-          <i class="material-icons">home</i>
-        </div>
-        <span class="nav__label">Home</span>
-      </a>
-      <a href="menu.html" class="nav__link">
-        <div class="nav__icon-container">
-          <i class="material-icons">spa</i>
-        </div>
-        <span class="nav__label">Menu</span>
-      </a>
-      <a href="about.html" class="nav__link">
-        <div class="nav__icon-container">
-          <i class="material-icons">info</i>
-        </div>
-        <span class="nav__label">About</span>
-      </a>
-      <a href="contact.html" class="nav__link">
-        <div class="nav__icon-container">
-          <i class="material-icons">phone</i>
-        </div>
-        <span class="nav__label">Contact Us</span>
-      </a>
-    </nav>
-  </div>
-
-        <div class="outer-container">  
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link rel="stylesheet" href="stylesheet.css"> <!-- Link to the universal stylesheet -->  
+    <link href="https://fonts.googleapis.com/css2?family=Alkalami&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> <!-- Icons for sidebar -->  
+    <title>Ingram - Contact Us</title>  
+    <style>  
+        /* Internal CSS for Contact Us page */  
+  
+        /* Style links to match the 'Contact Us' heading color */  
+        a {  
+            color: #108A4D; /* Same color as 'Contact Us' heading */  
+            text-decoration: none;  
+        }  
+        a:hover {  
+            color: #1FBA6C; /* Slightly different color on hover */  
+        }  
+  
+        /* Style for contact-item headings */  
+        .contact-item h3 {  
+            color: black; /* Black color for the headings */  
+            font-family: 'Alkalami', serif; /* Same font as 'Contact Us' */  
+            font-size: 32px;  
+            margin: 20px 0 10px 0;  
+        }  
+  
+        /* Social media flexbox layout */  
+        .social-media {  
+            display: flex;  
+            justify-content: center; /* Center the icons */  
+            align-items: center;  
+            gap: 10px; /* Use gap for more precise control over space between items */  
+            margin: 20px 0;  
+        }  
+  
+        .social-logo {  
+            width: 60px; /* Increase size for prominence */  
+            height: auto;  
+        }  
+  
+        .contact-detail p {  
+            margin: 5px 0;  
+            color: #333;  
+            font-size: 18px;  
+        }  
+  
+        /* Sidebar styles */  
+        .nav {  
+            position: fixed;  
+            top: 0;  
+            left: 0;  
+            width: 200px;  
+            height: 100%;  
+            background-color: #e0f7df;  
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);  
+            transform: translateX(-100%);  
+            transition: transform 0.3s ease;  
+            z-index: 1000;  
+        }  
+  
+        .nav__border {  
+            width: 20px;  
+            cursor: pointer;  
+            background-color: #1FBA6C;  
+            position: absolute;  
+            right: -20px;  
+            top: 50%; /* Center vertically */  
+            transform: translateY(-50%); /* Adjust for exact centering */  
+            height: 40px;  
+            border-radius: 0 5px 5px 0;  
+            display: flex;  
+            align-items: center;  
+            justify-content: center;  
+        }  
+  
+        .nav__link {  
+            display: flex;  
+            align-items: center;  
+            padding: 10px;  
+            text-decoration: none;  
+            color: #108A4D;  
+        }  
+  
+        .nav__icon-container {  
+            margin-right: 10px;  
+        }  
+  
+        .nav--collapsed {  
+            transform: translateX(0);  
+        }  
+  
+    </style>  
+</head>  
+<body>  
+    <div class="nav">  
+        <div class="nav__border">  
+          <i class="material-icons">menu</i>  
+        </div>  
+        <a href="home.html" class="nav__link">  
+          <div class="nav__icon-container">  
+            <i class="material-icons">home</i>  
+          </div>  
+          <span class="nav__label">Home</span>  
+        </a>  
+        <a href="menu.html" class="nav__link">  
+          <div class="nav__icon-container">  
+            <i class="material-icons">spa</i>  
+          </div>  
+          <span class="nav__label">Menu</span>  
+        </a>  
+        <a href="about.html" class="nav__link">  
+          <div class="nav__icon-container">  
+            <i class="material-icons">info</i>  
+          </div>  
+          <span class="nav__label">About</span>  
+        </a>  
+        <a href="contact.html" class="nav__link">  
+          <div class="nav__icon-container">  
+            <i class="material-icons">phone</i>  
+          </div>  
+          <span class="nav__label">Contact Us</span>  
+        </a>  
+    </div>  
+  
+    <div class="outer-container">  
         <div class="intro-box">  
             <h2>Contact Us</h2>  
         </div>  
@@ -86,7 +165,7 @@
   
             <!-- Phone Section -->  
             <div class="contact-item">  
-                <h3>Phone Numberss</h3>  
+                <h3>Phone Numbers</h3>  
                 <div class="contact-detail">  
                     <p>Call us at:</p>  
                     <p>Main Line: (123) 456-7890</p>  
@@ -95,22 +174,17 @@
             </div>  
         </div>  
     </div>  
-
-    
-  <script>
-    // Navigation
-    {
-      const collapsedClass = "nav--collapsed";
-      const lsKey = "navCollapsed";
-      const nav = document.querySelector(".nav");
-      const navBorder = nav.querySelector(".nav__border");
-      if (localStorage.getItem(lsKey) === "true") {
-        nav.classList.add(collapsedClass);
-      }
-      navBorder.addEventListener("click", () => {
-        nav.classList.toggle(collapsedClass);
-        localStorage.setItem(lsKey, nav.classList.contains(collapsedClass));
-      });
-    }
-  </script>
-</body>
+  
+    <script>  
+        // Navigation  
+        {  
+          const collapsedClass = "nav--collapsed";  
+          const nav = document.querySelector(".nav");  
+          const navBorder = nav.querySelector(".nav__border");  
+          navBorder.addEventListener("click", () => {  
+            nav.classList.toggle(collapsedClass);  
+          });  
+        }  
+    </script>  
+</body>  
+</html>  

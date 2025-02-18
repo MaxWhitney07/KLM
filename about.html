@@ -1,109 +1,152 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Collapsible Sidebar</title>
-  <link rel="stylesheet" href="stylesheet.css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-</head>
-
-<body>
-  <div class="page-container">
-    <nav class="nav">
-      <div class="nav__border"></div>
-      <a href="#" class="nav__link">
-        <div class="nav__icon-container">
-          <i class="material-icons">menu</i>
-        </div>
-        <span class="nav__label">Navigation</span>
-      </a>
-      <a href="veganhomepage.html" class="nav__link">
-        <div class="nav__icon-container">
-          <i class="material-icons">home</i>
-        </div>
-        <span class="nav__label">Home</span>
-      </a>
-      <a href="menu.html" class="nav__link">
-        <div class="nav__icon-container">
-          <i class="material-icons">spa</i>
-        </div>
-        <span class="nav__label">Menu</span>
-      </a>
-      <a href="about.html" class="nav__link">
-        <div class="nav__icon-container">
-          <i class="material-icons">info</i>
-        </div>
-        <span class="nav__label">About</span>
-      </a>
-      <a href="contact.html" class="nav__link">
-        <div class="nav__icon-container">
-          <i class="material-icons">phone</i>
-        </div>
-        <span class="nav__label">Contact Us</span>
-      </a>
-    </nav>
-  </div>
-    <main>
-      <div> <!--Intro Div-->
-              <h1>Who We Are</h1>
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>About Us</title>  
+    <link rel="stylesheet" href="stylesheet.css"> <!-- Link to your universal stylesheet -->  
+    <link href="https://fonts.googleapis.com/css2?family=Alkalami&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> <!-- Icons for sidebar -->  
+    <style>  
+        /* Internal CSS for About Us page */  
   
-              <img src = "img/whoarewe.jpg", height = 400px>
-              
-              <p>We are a bunch of highschool students who don't know alot about food</p>
-          </div>
+        /* Style for headings and paragraphs */  
+        h1, h2, h3 {  
+            color: black; /* Black color for headings */  
+            font-family: 'Alkalami', serif;  
+            text-align: center; /* Center align headings */  
+        }  
   
-          <div> <!--Process division-->
-              <h1>The Process</h1> 
+        p {  
+            font-size: 18px; /* Font size for paragraphs */  
+            color: black; /* Black color for paragraph text */  
+            text-align: center; /* Center align paragraphs */  
+        }  
   
-              <div> <!--Food to Kitchen Process-->
-                  
-                  <hr>
-                  
-                  <h2>Food to Kitchen</h2>
-                  
-                  <figure>
-                      
-                      <picture>
-                      <img src = "img/fresh.jpg", height = 400px>
-                      </picture>
-                      
-                      <figcaption><h6>A local farmer and his farm.</h6></figcaption>
-                      
-                  </figure>
-                  
-                  <p>We get all of our food straight from the best source: Local Farmers! We pay the local farmers for the most fresh, highest quality food and it isn't likely you will find a restaurant that does it better.</p>
-              
-              </div>
-          </div>
-          
-          <div> <!--Goal Division-->
-              
-              <h2>Our Goal</h2>
-              
-              <p>Our goal is to provide healthy but tasty food to the community</p>
-          
-          </div>
+        footer {  
+            text-align: center;  
+            padding: 10px;  
+            background-color: #f9f9f9;  
+        }  
   
-          <footer>
-              <p><a href = "contact.html">Contact Us!</a> (123)-456-7890 <a href="placeholder@mail.com">placeholder@mail.com</a></p>
-          </footer>
-      </main>
-  <script>
-    // Navigation
-    {
-      const collapsedClass = "nav--collapsed";
-      const lsKey = "navCollapsed";
-      const nav = document.querySelector(".nav");
-      const navBorder = nav.querySelector(".nav__border");
-      if (localStorage.getItem(lsKey) === "true") {
-        nav.classList.add(collapsedClass);
-      }
-      navBorder.addEventListener("click", () => {
-        nav.classList.toggle(collapsedClass);
-        localStorage.setItem(lsKey, nav.classList.contains(collapsedClass));
-      });
-    }
-  </script>
-</body>
+        /* Sidebar styles */  
+        .nav {  
+            position: fixed;  
+            top: 0;  
+            left: 0;  
+            width: 200px;  
+            height: 100%;  
+            background-color: #e0f7df;  
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);  
+            transform: translateX(-100%);  
+            transition: transform 0.3s ease;  
+            z-index: 1000;  
+        }  
+  
+        .nav__border {  
+            width: 20px;  
+            cursor: pointer;  
+            background-color: #1FBA6C;  
+            position: absolute;  
+            right: -20px;  
+            top: 50%;  
+            transform: translateY(-50%);  
+            height: 40px;  
+            border-radius: 0 5px 5px 0;  
+            display: flex;  
+            align-items: center;  
+            justify-content: center;  
+        }  
+  
+        .nav__link {  
+            display: flex;  
+            align-items: center;  
+            padding: 10px;  
+            text-decoration: none;  
+            color: #108A4D;  
+        }  
+  
+        .nav__icon-container {  
+            margin-right: 10px;  
+        }  
+  
+        .nav--collapsed {  
+            transform: translateX(0);  
+        }  
+    </style>  
+</head>  
+<body>  
+    <nav class="nav">  
+        <div class="nav__border">  
+            <i class="material-icons">menu</i>  
+        </div>  
+        <a href="home.html" class="nav__link"> <!-- Link to home.html -->  
+            <div class="nav__icon-container">  
+                <i class="material-icons">home</i>  
+            </div>  
+            <span class="nav__label">Home</span>  
+        </a>  
+        <a href="menu.html" class="nav__link">  
+            <div class="nav__icon-container">  
+                <i class="material-icons">spa</i>  
+            </div>  
+            <span class="nav__label">Menu</span>  
+        </a>  
+        <a href="about.html" class="nav__link">  
+            <div class="nav__icon-container">  
+                <i class="material-icons">info</i>  
+            </div>  
+            <span class="nav__label">About</span>  
+        </a>  
+        <a href="contact.html" class="nav__link">  
+            <div class="nav__icon-container">  
+                <i class="material-icons">phone</i>  
+            </div>  
+            <span class="nav__label">Contact Us</span>  
+        </a>  
+    </nav>  
+  
+    <div class="outer-container">  
+        <div class="intro-box">  
+            <h2>About Us</h2>
+        </div>  
+  
+        <main>  
+            <div>  
+                <h1>Who We Are</h1> 
+                <p>We are a bunch of high school students who don't know a lot about food.</p>  
+                <img src="whoarewe.jpg" height="400px" alt="Who We Are"> 
+            </div>  
+  
+            <div>  
+                <h3>Food to Kitchen</h3>
+                <figure>  
+                    <img src="fresh.jpg" height="400px" alt="Local Farmer"> 
+                </figure>  
+                <p>We get all of our food straight from the best source: Local Farmers! We pay the local farmers for the most fresh, highest quality food and it isn't likely you will find a restaurant that does it better.</p>  
+            </div>  
+  
+            <div>  
+                <h2>Our Goal</h2> <!-- Smaller Section Title -->  
+                <p>Our goal is to provide healthy but tasty food to the community.</p>  
+            </div>  
+  
+            <footer>  
+                <p><a href="contact.html">Contact Us!</a> (123)-456-7890 <a href="mailto:placeholder@mail.com">placeholder@mail.com</a></p>  
+            </footer>  
+        </main>  
+    </div>  
+  
+    <script>  
+        // Navigation  
+        {  
+            const collapsedClass = "nav--collapsed";  
+            const nav = document.querySelector(".nav");  
+            const navBorder = nav.querySelector(".nav__border");  
+            navBorder.addEventListener("click", () => {  
+                nav.classList.toggle(collapsedClass);  
+            });  
+        }  
+    </script>  
+</body>  
+</html>  
